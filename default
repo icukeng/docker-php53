@@ -1,0 +1,33 @@
+<VirtualHost *:80>
+  DocumentRoot /var/www
+  Options -Indexes +FollowSymLinks
+  RewriteEngine On
+  AddHandler php5-script .php
+
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+  <Directory /var/www/>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  ErrorLog /proc/self/fd/1
+  # Possible values: debug, info, notice, warn, error, crit, alert, emerg.
+  LogLevel warn
+  # CustomLog /proc/self/fd/1 combined
+
+  Alias /doc/ "/usr/share/doc/"
+  <Directory "/usr/share/doc/">
+    Options Indexes MultiViews FollowSymLinks
+    AllowOverride None
+    Order deny,allow
+    Deny from all
+    Allow from 127.0.0.0/255.0.0.0 ::1/128
+  </Directory>
+
+</VirtualHost>
+
