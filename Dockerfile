@@ -45,4 +45,4 @@ env APACHE_RUN_DIR     /var/run/apache2
 env APACHE_LOCK_DIR    /var/lock/apache2
 env APACHE_LOG_DIR     /var/log/apache2
 
-ENTRYPOINT [ "/usr/sbin/apache2", "-DFOREGROUND" ]
+CMD ["/usr/sbin/apache2","-DFOREGROUND"]
