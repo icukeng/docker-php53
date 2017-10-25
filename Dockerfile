@@ -16,6 +16,7 @@ apache2-mpm-prefork=2.2.22-1ubuntu1.11 \
             php5-xsl=5.3.10-1ubuntu3.26 \
         php5-mysqlnd=5.3.10-1ubuntu3.26 \
          php5-sqlite=5.3.10-1ubuntu3.26 \
+           php5-curl=5.3.10-1ubuntu3.26 \
            php5-uuid \
     && \
     apt-get clean && \
