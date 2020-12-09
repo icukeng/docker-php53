@@ -35,8 +35,6 @@ COPY default /etc/apache2/sites-available/default
 COPY php5-bcompiler_1.0.2-1ubuntu4_amd64.deb /root/
 RUN dpkg -i /root/php5-bcompiler_1.0.2-1ubuntu4_amd64.deb
 
-VOLUME ["/var/www"]
-
 EXPOSE 80
 
 ENV APACHE_RUN_USER    www-data
