@@ -4,21 +4,23 @@ COPY degrade.list /etc/apt/sources.list.d/
 
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y  \
-            apache2=2.2.22-1ubuntu1.11 \
-   apache2.2-common=2.2.22-1ubuntu1.11 \
-      apache2.2-bin=2.2.22-1ubuntu1.11 \
-apache2-mpm-prefork=2.2.22-1ubuntu1.11 \
- libapache2-mod-php5=5.3.10-1ubuntu3.26 \
-            php5-cli=5.3.10-1ubuntu3.26 \
-                php5=5.3.10-1ubuntu3.26 \
-         php5-common=5.3.10-1ubuntu3.26 \
-          php5-pgsql=5.3.10-1ubuntu3.26 \
-            php5-xsl=5.3.10-1ubuntu3.26 \
-        php5-mysqlnd=5.3.10-1ubuntu3.26 \
-         php5-sqlite=5.3.10-1ubuntu3.26 \
-           php5-curl=5.3.10-1ubuntu3.26 \
+      apache2=2.2.22-1ubuntu1.15 \
+      apache2.2-common=2.2.22-1ubuntu1.15 \
+      apache2.2-bin=2.2.22-1ubuntu1.15 \
+      apache2-mpm-prefork=2.2.22-1ubuntu1.15 \
+      libapache2-mod-php5=5.3.10-1ubuntu3.48 \
+      php5-cli=5.3.10-1ubuntu3.48 \
+      php5=5.3.10-1ubuntu3.48 \
+      php5-common=5.3.10-1ubuntu3.48 \
+      php5-pgsql=5.3.10-1ubuntu3.48 \
+      php5-xsl=5.3.10-1ubuntu3.48 \
+      php5-mysqlnd=5.3.10-1ubuntu3.48 \
+      php5-sqlite=5.3.10-1ubuntu3.48 \
+      php5-curl=5.3.10-1ubuntu3.48 \
+      php5-ldap=5.3.10-1ubuntu3.48 \
       php5-memcached=1.0.2-2 \
-           php5-uuid \
+      php5-imagick=3.1.0~rc1-1 \
+      php5-uuid \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
